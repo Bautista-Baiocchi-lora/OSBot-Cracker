@@ -1,3 +1,5 @@
 Manifest-Version: 1.0
 Premain-Class: org.ethan.agent.AgentMain
 Agent-Class: org.ethan.agent.AgentMain
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true
