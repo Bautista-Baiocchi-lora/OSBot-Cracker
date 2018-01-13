@@ -11,81 +11,79 @@ import java.util.Map;
  */
 public class HookCollection {
 
-	private Map<String, FieldHook> fieldHookMap = new HashMap<>();
+    private Map<String, FieldHook> fieldHookMap = new HashMap<>();
 
-	public HookCollection() {
-		iterateMaps("org.osbot.core.inject.hook.FieldHook");
-	}
+    public HookCollection() {
+        iterateMaps("org.osbot.core.inject.hook.FieldHook");
+    }
 
-	public void print() {
-		for (Map.Entry<String, FieldHook> fieldHookMap : fieldHookMap.entrySet()) {
-			Logger.log("MappedName: " + fieldHookMap.getKey() + " || OriginalName: " + fieldHookMap.getValue().originalName + " || desc: " + fieldHookMap.getValue().originalDesc);
-		}
-	}
+    public void print() {
+        for (Map.Entry<String, FieldHook> fieldHookMap : fieldHookMap.entrySet()) {
+            Logger.log("MappedName: " + fieldHookMap.getKey() + " || OriginalName: " + fieldHookMap.getValue().originalName + " || desc: " + fieldHookMap.getValue().originalDesc);
+        }
+    }
 
-	public Object getHookCollection() {
-		return Engine.getReflectionEngine().getFieldValue("org.osbot.BotApplication", "iIIIiiiiIIii", Engine.getReflectionEngine().getBotAppInstance());
-	}
+    public Object getHookCollection() {
+        return Engine.getReflectionEngine().getFieldValue("org.osbot.BotApplication", "iIIIiiiiIIii", Engine.getReflectionEngine().getBotAppInstance());
+    }
 
-	public Map<String, Object> getClassHookMapOne() {
-		return (Map<String, Object>) Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.HookCollection", "iiiiiiiiiiIi", getHookCollection());
-	}
+    public Map<String, Object> getClassHookMapOne() {
+        return (Map<String, Object>) Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.HookCollection", "iiiiiiiiiiIi", getHookCollection());
+    }
 
-	public Map<String, Object> getClassHookMapTwo() {
-		return (Map<String, Object>) Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.HookCollection", "IiiIiiiiIiIi", getHookCollection());
-	}
+    public Map<String, Object> getClassHookMapTwo() {
+        return (Map<String, Object>) Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.HookCollection", "IiiIiiiiIiIi", getHookCollection());
+    }
 
-	public Map<String, Object> getFieldHookMapOne(Object obj) {
-		return (Map<String, Object>) Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.ClassHook", "iiiiiiiiiiIi", obj);
-	}
+    public Map<String, Object> getFieldHookMapOne(Object obj) {
+        return (Map<String, Object>) Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.ClassHook", "iiiiiiiiiiIi", obj);
+    }
 
-	public Map<String, Object> getFieldHookMapTwo(Object obj) {
-		return (Map<String, Object>) Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.ClassHook", "IiiIiiiiIiIi", obj);
-	}
+    public Map<String, Object> getFieldHookMapTwo(Object obj) {
+        return (Map<String, Object>) Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.ClassHook", "IiiIiiiiIiIi", obj);
+    }
 
-	public void iterateMaps(String infoClass) {
-		for (Map.Entry<String, Object> entry : getClassHookMapOne().entrySet()) {
-			for (Map.Entry<String, Object> entry2 : getFieldHookMapOne(entry.getValue()).entrySet()) {
-				Object obj = entry2.getValue();
-				fieldHookMap.put(getMappedName(infoClass, obj), new FieldHook(getOriginalFieldName(infoClass, obj), getOriginalFieldDesc(infoClass, obj), "", getCustomFieldDesc(infoClass, obj), getMappedName(infoClass, obj), 1));
-			}
-		}
-		for (Map.Entry<String, Object> entry : getClassHookMapTwo().entrySet()) {
-			for (Map.Entry<String, Object> entry2 : getFieldHookMapTwo(entry.getValue()).entrySet()) {
-				Object obj = entry2.getValue();
-				fieldHookMap.put(getMappedName(infoClass, obj), new FieldHook(getOriginalFieldName(infoClass, obj), getOriginalFieldDesc(infoClass, obj), "", getCustomFieldDesc(infoClass, obj), getMappedName(infoClass, obj), 1));
-			}
-		}
-	}
-
-
+    public void iterateMaps(String infoClass) {
+        for (Map.Entry<String, Object> entry : getClassHookMapOne().entrySet()) {
+            for (Map.Entry<String, Object> entry2 : getFieldHookMapOne(entry.getValue()).entrySet()) {
+                Object obj = entry2.getValue();
+                fieldHookMap.put(getMappedName(infoClass, obj), new FieldHook(getOriginalFieldName(infoClass, obj), getOriginalFieldDesc(infoClass, obj), "", getCustomFieldDesc(infoClass, obj), getMappedName(infoClass, obj), 1));
+            }
+        }
+        for (Map.Entry<String, Object> entry : getClassHookMapTwo().entrySet()) {
+            for (Map.Entry<String, Object> entry2 : getFieldHookMapTwo(entry.getValue()).entrySet()) {
+                Object obj = entry2.getValue();
+                fieldHookMap.put(getMappedName(infoClass, obj), new FieldHook(getOriginalFieldName(infoClass, obj), getOriginalFieldDesc(infoClass, obj), "", getCustomFieldDesc(infoClass, obj), getMappedName(infoClass, obj), 1));
+            }
+        }
+    }
 
 
-	public String getMappedName(String clazz, Object obj) {
-		return (String) Engine.getReflectionEngine().getFieldValue(clazz, "mappedName", obj);
-	}
+    public String getMappedName(String clazz, Object obj) {
+        return (String) Engine.getReflectionEngine().getFieldValue(clazz, "mappedName", obj);
+    }
 
-	public String getOriginalFieldName(String clazz, Object obj) {
-		return (String) Engine.getReflectionEngine().getFieldValue(clazz, "originalName", obj);
-	}
+    public String getOriginalFieldName(String clazz, Object obj) {
+        return (String) Engine.getReflectionEngine().getFieldValue(clazz, "originalName", obj);
+    }
 
-	public String getOriginalFieldDesc(String clazz, Object obj) {
-		return (String) Engine.getReflectionEngine().getFieldValue(clazz, "originalDesc", obj);
-	}
+    public String getOriginalFieldDesc(String clazz, Object obj) {
+        return (String) Engine.getReflectionEngine().getFieldValue(clazz, "originalDesc", obj);
+    }
 
-	public String getCustomFieldDesc(String clazz, Object obj) {
-		return (String) Engine.getReflectionEngine().getFieldValue(clazz, "customDesc", obj);
-	}
+    public String getCustomFieldDesc(String clazz, Object obj) {
+        return (String) Engine.getReflectionEngine().getFieldValue(clazz, "customDesc", obj);
+    }
 
-	public Object getFieldMultiplier(Object obj) {
-		return Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.FieldHook", "multiplier", obj);
-	}
+    public Object getFieldMultiplier(Object obj) {
+        return Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.FieldHook", "multiplier", obj);
+    }
 
-	public long getFieldMultDecoder(Object obj) {
-		return (long) Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.FieldMultiplier", "decoder", getFieldMultiplier(obj));
-	}
+    public long getFieldMultDecoder(Object obj) {
+        return (long) Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.FieldMultiplier", "decoder", getFieldMultiplier(obj));
+    }
 
-	public long getMultiplier(Object obj) {
-		return (long) Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.FieldMultiplier", "iIiIiiiiIiIi", getFieldMultiplier(obj));
-	}
+    public long getMultiplier(Object obj) {
+        return (long) Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.FieldMultiplier", "iIiIiiiiIiIi", getFieldMultiplier(obj));
+    }
 }

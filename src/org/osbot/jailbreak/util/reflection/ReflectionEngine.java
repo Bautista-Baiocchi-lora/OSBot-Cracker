@@ -14,6 +14,11 @@ public class ReflectionEngine {
         this.classLoader = classLoader;
     }
 
+    public static Object getBotAppInstance() {
+        return Engine.getReflectionEngine().getFieldValue("org.osbot.BotApplication", "iiiiiiiiIiii");
+
+    }
+
     public ReflectedClass getClass(String name, Object instance) {
         try {
             return new ReflectedClass(classLoader.loadClass(name), instance);
@@ -23,7 +28,6 @@ public class ReflectionEngine {
         return null;
     }
 
-
     public ReflectedClass getClass(String name) {
         return getClass(name, null);
     }
@@ -31,7 +35,6 @@ public class ReflectionEngine {
     public ReflectedClass getClass(Object instance) {
         return getClass(instance.getClass().getSimpleName(), instance);
     }
-
 
     public ReflectedField getField(String className, String fieldName, Object instance) {
 
@@ -102,11 +105,6 @@ public class ReflectionEngine {
             e.printStackTrace();
         }
         return null;
-    }
-
-    public static Object getBotAppInstance() {
-        return Engine.getReflectionEngine().getFieldValue("org.osbot.BotApplication", "iiiiiiiiIiii");
-
     }
 
 }

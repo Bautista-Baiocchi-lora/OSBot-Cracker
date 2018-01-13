@@ -18,37 +18,37 @@ import java.security.ProtectionDomain;
 
 public class AgentMain implements ClassFileTransformer {
 
-	private static Instrumentation inst;
+    private static Instrumentation inst;
 
-	public static void premain(String args, Instrumentation instrumentation) {
-		agentmain(args, instrumentation);
-	}
+    public static void premain(String args, Instrumentation instrumentation) {
+        agentmain(args, instrumentation);
+    }
 
-	public static void agentmain(String args, Instrumentation instrumentation) {
-		System.out.println("[Agent] Load agent into running JVM using Attach API");
-		inst = instrumentation;
-		inst.addTransformer(new AgentMain(), true);
-		Engine.setClassCache(Utilities.getAllClasses(instrumentation));
-		new MainFrame(instrumentation);
-		try {
-			Engine.setReflectionEngine(new ReflectionEngine(ClassLoader.getSystemClassLoader()));
-		} catch (IOException e) {
-			Logger.log(e.getLocalizedMessage());
-		}
-		new BotApp();
-	}
+    public static void agentmain(String args, Instrumentation instrumentation) {
+        System.out.println("[Agent] Load agent into running JVM using Attach API");
+        inst = instrumentation;
+        inst.addTransformer(new AgentMain(), true);
+        Engine.setClassCache(Utilities.getAllClasses(instrumentation));
+        new MainFrame(instrumentation);
+        try {
+            Engine.setReflectionEngine(new ReflectionEngine(ClassLoader.getSystemClassLoader()));
+        } catch (IOException e) {
+            Logger.log(e.getLocalizedMessage());
+        }
+        new BotApp();
+    }
 
 
-	@Override
-	public byte[] transform(ClassLoader loader, String className,
-	                        Class<?> redefinedClass, ProtectionDomain protDomain, byte[] classBytes) {
-		if (Utilities.isCandidate(className)) {
-			Logger.log("Adding: " + className + " to cache..");
-			Engine.getClasses().put(className, classBytes);
-		}
+    @Override
+    public byte[] transform(ClassLoader loader, String className,
+                            Class<?> redefinedClass, ProtectionDomain protDomain, byte[] classBytes) {
+        if (Utilities.isCandidate(className)) {
+            Logger.log("Adding: " + className + " to cache..");
+            Engine.getClasses().put(className, classBytes);
+        }
 
-		return classBytes;
-	}
+        return classBytes;
+    }
 }
 
 
