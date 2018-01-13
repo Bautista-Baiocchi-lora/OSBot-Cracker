@@ -52,7 +52,7 @@ public class Utilities {
 			JarOutputStream out = new JarOutputStream(stream);
 			for (Map.Entry<String, byte[]> entry : Engine.getClasses().entrySet()) {
 				Logger.log(entry.getKey());
-				JarEntry je = new JarEntry(entry.getKey().replace("scripts/", "") + ".class");
+				JarEntry je = new JarEntry(entry.getKey() + ".class");
 				out.putNextEntry(je);
 				out.write(entry.getValue());
 			}

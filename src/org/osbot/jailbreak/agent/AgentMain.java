@@ -28,6 +28,7 @@ public class AgentMain implements ClassFileTransformer {
 	public static void agentmain(String args, Instrumentation instrumentation) {
 		System.out.println("[Agent] Load agent into running JVM using Attach API");
 		inst = instrumentation;
+		inst.addTransformer(new AgentMain(), true);
 		Engine.setClassCache(Utilities.getAllClasses(instrumentation));
 		new MainFrame(instrumentation);
 		try {
@@ -36,7 +37,7 @@ public class AgentMain implements ClassFileTransformer {
 			Logger.log(e.getLocalizedMessage());
 		}
 		new BotApp();
-		inst.addTransformer(new AgentMain(), true);
+
 	}
 
 

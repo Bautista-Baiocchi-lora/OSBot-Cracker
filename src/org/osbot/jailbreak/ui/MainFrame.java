@@ -47,18 +47,19 @@ public class MainFrame extends JFrame implements ActionListener {
 		this.packageName = new JTextField();
 		packageName.getDocument().addDocumentListener(new DocumentListener() {
 			@Override
-			public void insertUpdate(final DocumentEvent e) {
-
-			}
-
-			@Override
-			public void removeUpdate(final DocumentEvent e) {
-
-			}
-
-			@Override
-			public void changedUpdate(final DocumentEvent e) {
+			public void insertUpdate(DocumentEvent e) {
+				Logger.log("Setting pattern: "+packageName.getText());
 				Engine.setPattern(packageName.getText());
+			}
+
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				Engine.setPattern(packageName.getText());
+			}
+
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+
 			}
 		});
 		controlsLayout.add(packageName);
