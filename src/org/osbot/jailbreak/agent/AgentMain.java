@@ -36,7 +36,6 @@ public class AgentMain implements ClassFileTransformer {
 			Logger.log(e.getLocalizedMessage());
 		}
 		new BotApp();
-		Engine.setHookCollection(new HookCollection());
 		inst.addTransformer(new AgentMain(), true);
 	}
 

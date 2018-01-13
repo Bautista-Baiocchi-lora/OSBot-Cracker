@@ -1,5 +1,6 @@
 package org.osbot.jailbreak.ui;
 
+import org.osbot.jailbreak.botapp.hooks.HookCollection;
 import org.osbot.jailbreak.data.Constants;
 import org.osbot.jailbreak.data.Engine;
 import org.osbot.jailbreak.ui.logger.Logger;
@@ -70,7 +71,7 @@ public class MainFrame extends JFrame implements ActionListener {
 				Logger.log("Searching pattern: " + Engine.getPattern());
 				Collection<Class<?>> result = Utilities.getDifference(Engine.getClassCache(), Utilities.getAllClasses(instrumentation));
 				for (Class<?> clazz : result) {
-					if (Engine.getPattern().contains(clazz.toGenericString())) {
+					if (clazz.toGenericString().contains(Engine.getPattern())) {
 						Logger.log(clazz.toGenericString());
 					}
 				}
@@ -79,7 +80,7 @@ public class MainFrame extends JFrame implements ActionListener {
 				Utilities.dumpJar(new File(Constants.dumpDir + Engine.getPattern() + ".jar"));
 				break;
 			case "strip hooks":
-				Engine.getHookCollection().print();
+				new HookCollection().print();
 				break;
 		}
 	}
