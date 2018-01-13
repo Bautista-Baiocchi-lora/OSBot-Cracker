@@ -80,7 +80,10 @@ public class MainFrame extends JFrame implements ActionListener {
 				Utilities.dumpJar(new File(Constants.dumpDir + Engine.getPattern() + ".jar"));
 				break;
 			case "strip hooks":
-				new HookCollection().print();
+				if (Engine.getHookCollection() == null) {
+					Engine.setHookCollection(new HookCollection());
+				}
+				Engine.getHookCollection().print();
 				break;
 		}
 	}
