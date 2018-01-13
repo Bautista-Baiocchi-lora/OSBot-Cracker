@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Premain-Class: org.ethan.agent.AgentMain
-Agent-Class: org.ethan.agent.AgentMain
+Premain-Class: org.osbot.jailbreak.agent.AgentMain
+Agent-Class: org.osbot.jailbreak.agent.AgentMain
 Can-Redefine-Classes: true
 Can-Retransform-Classes: true
