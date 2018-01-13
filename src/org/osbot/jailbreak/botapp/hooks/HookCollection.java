@@ -16,6 +16,9 @@ public class HookCollection {
 	public HookCollection() {
 		iterateMapOne("org.osbot.core.inject.hook.FieldHook");
 		iterateMapTwo("org.osbot.core.inject.hook.FieldHook");
+	}
+
+	public void print() {
 		for (Map.Entry<String, FieldHook> fieldHookMap : fieldHookMap.entrySet()) {
 			Logger.log("MappedName: " + fieldHookMap.getKey() + " || OriginalName: " + fieldHookMap.getValue().originalName + " || desc: " + fieldHookMap.getValue().originalDesc);
 		}

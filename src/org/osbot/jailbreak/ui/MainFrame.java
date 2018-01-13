@@ -1,6 +1,5 @@
 package org.osbot.jailbreak.ui;
 
-import org.osbot.jailbreak.botapp.hooks.HookCollection;
 import org.osbot.jailbreak.data.Constants;
 import org.osbot.jailbreak.data.Engine;
 import org.osbot.jailbreak.ui.logger.Logger;
@@ -23,7 +22,7 @@ public class MainFrame extends JFrame implements ActionListener {
 	private final JTextField packageName;
 	private final JMenuBar menuBar;
 	private final JMenu fileMenu;
-	private final JCheckBoxMenuItem hookCollection;
+	private final JMenuItem hookCollection;
 
 	public MainFrame(Instrumentation instrumentation) {
 		super("Jailbroken OSBot");
@@ -49,12 +48,14 @@ public class MainFrame extends JFrame implements ActionListener {
 		this.add(new LoggerPanel(new Logger()), BorderLayout.SOUTH);
 
 
-		this.hookCollection = new JCheckBoxMenuItem("Strip hooks");
-		this.hookCollection.setActionCommand("stip hooks");
+		this.hookCollection = new JMenuItem("Strip hooks");
+		this.hookCollection.setActionCommand("strip hooks");
 		this.hookCollection.addActionListener(this::actionPerformed);
 		this.fileMenu = new JMenu("File");
+		this.fileMenu.add(hookCollection);
 		this.menuBar = new JMenuBar();
 		this.menuBar.add(fileMenu);
+		setJMenuBar(menuBar);
 
 		pack();
 		setLocationRelativeTo(getOwner());
@@ -65,20 +66,20 @@ public class MainFrame extends JFrame implements ActionListener {
 	public void actionPerformed(final ActionEvent e) {
 		switch (e.getActionCommand()) {
 			case "load":
-				Engine.setPattern(JOptionPane.showInputDialog("What is the packaging", null));
+				Engine.setPattern(packageName.getText());
 				Logger.log("Searching pattern: " + Engine.getPattern());
 				Collection<Class<?>> result = Utilities.getDifference(Engine.getClassCache(), Utilities.getAllClasses(instrumentation));
 				for (Class<?> clazz : result) {
-					Logger.log(clazz.toGenericString());
+					if (Engine.getPattern().contains(clazz.toGenericString())) {
+						Logger.log(clazz.toGenericString());
+					}
 				}
 				break;
 			case "dump":
 				Utilities.dumpJar(new File(Constants.dumpDir + Engine.getPattern() + ".jar"));
 				break;
 			case "strip hooks":
-				if (hookCollection.isSelected()) {
-					new HookCollection();
-				}
+				Engine.getHookCollection().print();
 				break;
 		}
 	}

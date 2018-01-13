@@ -7,55 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="678eb7ff-7bfd-4751-a6db-bb6850f61eba" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MirrorOsbot_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/OSBot_Jailbreak_jar.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/agent/AgentMain.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/botapp/BotApp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/botapp/hooks/FieldHook.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/botapp/hooks/HookCollection.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/core/Core.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/data/Constants.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/data/Engine.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/scripts/ScriptData.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/ui/LogFrame.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/ui/ePopUpMenu.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/ui/logger/LogType.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/ui/logger/Logger.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/ui/logger/LoggerFlag.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/ui/logger/LoggerPanel.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/util/Utilities.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/util/reflection/Modifiers$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/util/reflection/Modifiers$Condition.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/util/reflection/Modifiers$ModifierBuilder.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/util/reflection/Modifiers.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/util/reflection/ReflectedClass$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/util/reflection/ReflectedClass.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/util/reflection/ReflectedConstructor.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/util/reflection/ReflectedField.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/util/reflection/ReflectedMethod.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MirrorOsbot/org/ethan/util/reflection/ReflectionEngine.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/agent/AgentMain.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/agent/AgentMain.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/botapp/BotApp.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/botapp/BotApp.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/botapp/hooks/FieldHook.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/botapp/hooks/FieldHook.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/botapp/hooks/HookCollection.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/botapp/hooks/HookCollection.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/data/Constants.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/data/Constants.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/data/Engine.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/data/Engine.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/scripts/ScriptData.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/scripts/ScriptData.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/ui/LogFrame.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/ui/MainFrame.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/ui/ePopUpMenu.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/ui/logger/LogType.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/ui/logger/LogType.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/ui/logger/Logger.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/ui/logger/Logger.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/ui/logger/LoggerFlag.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/ui/logger/LoggerFlag.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/ui/logger/LoggerPanel.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/ui/logger/LoggerPanel.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/util/Utilities.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/util/Utilities.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/util/reflection/Modifiers.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/util/reflection/Modifiers.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/util/reflection/ReflectedClass.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/util/reflection/ReflectedClass.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/util/reflection/ReflectedConstructor.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/util/reflection/ReflectedConstructor.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/util/reflection/ReflectedField.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/util/reflection/ReflectedField.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/util/reflection/ReflectedMethod.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/util/reflection/ReflectedMethod.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/util/reflection/ReflectionEngine.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/util/reflection/ReflectionEngine.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/osbot/jailbreak/agent/AgentMain.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/agent/AgentMain.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/osbot/jailbreak/botapp/hooks/HookCollection.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/botapp/hooks/HookCollection.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/osbot/jailbreak/data/Engine.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/data/Engine.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/osbot/jailbreak/ui/MainFrame.java" afterPath="$PROJECT_DIR$/src/org/osbot/jailbreak/ui/MainFrame.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,11 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AgentMain.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AgentMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/agent/AgentMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utilities.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/util/Utilities.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -80,8 +46,44 @@
       <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/data/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="0">
+              <caret line="0" column="33" lean-forward="true" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Engine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/data/Engine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+              <folding>
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#694#695#0" expanded="true" />
+                <element signature="e#739#740#0" expanded="true" />
+                <element signature="e#1008#1009#0" expanded="true" />
+                <element signature="e#1032#1033#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/ui/MainFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="562">
+              <caret line="72" column="80" lean-forward="false" selection-start-line="72" selection-start-column="80" selection-end-line="72" selection-end-column="80" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HookCollection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/botapp/hooks/HookCollection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -147,13 +149,16 @@
         <option value="$PROJECT_DIR$/src/org/osbot/jailbreak/ui/LogFrame.java" />
         <option value="$PROJECT_DIR$/src/org/osbot/jailbreak/ui/MainFra.java" />
         <option value="$PROJECT_DIR$/src/org/osbot/jailbreak/botapp/hooks/HookCollection.java" />
-        <option value="$PROJECT_DIR$/src/org/osbot/jailbreak/ui/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/org/osbot/jailbreak/data/Engine.java" />
         <option value="$PROJECT_DIR$/src/org/osbot/jailbreak/agent/AgentMain.java" />
+        <option value="$PROJECT_DIR$/src/org/osbot/jailbreak/ui/MainFrame.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
+    <option name="x" value="1440" />
+    <option name="y" value="-210" />
+    <option name="width" value="1600" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -172,7 +177,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,15 +213,52 @@
               <item name="Jailbroken-OSBot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="jailbreak" type="462c0819:PsiDirectoryNode" />
+              <item name="botapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Jailbroken-OSBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Jailbroken-OSBot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jailbreak" type="462c0819:PsiDirectoryNode" />
+              <item name="botapp" type="462c0819:PsiDirectoryNode" />
+              <item name="hooks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Jailbroken-OSBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Jailbroken-OSBot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jailbreak" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Jailbroken-OSBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Jailbroken-OSBot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jailbreak" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Jailbroken-OSBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Jailbroken-OSBot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jailbreak" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="logger" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Jailbroken-OSBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Jailbroken-OSBot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jailbreak" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -478,23 +520,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="1440" y="-210" width="1600" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33041576" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23618636" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19236112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -502,33 +544,13 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23618636" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26586434" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -543,19 +565,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/ui/ePopUpMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="41" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/ui/ePopUpMenu.java" />
     <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/data/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#694#695#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -717,16 +738,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/ethan/botapp/SetVIP.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/util/Utilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/scripts/ScriptData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -772,46 +783,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/Loader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="99" lean-forward="false" selection-start-line="33" selection-start-column="99" selection-end-line="33" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/ui/ePopUpMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/data/Engine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/botapp/hooks/HookCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/ui/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="79" column="41" lean-forward="false" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/Loader.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/ui/ePopUpMenu.java" />
     <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/botapp/BotApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -820,18 +793,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/data/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/botapp/hooks/HookCollection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="270">
+          <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/data/Engine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+          <folding>
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#694#695#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/agent/AgentMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/util/Utilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/data/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="33" lean-forward="true" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/osbot/jailbreak/ui/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="72" column="80" lean-forward="false" selection-start-line="72" selection-start-column="80" selection-end-line="72" selection-end-column="80" />
           <folding />
         </state>
       </provider>
