@@ -1,6 +1,5 @@
 package org.ethan.ui;
 
-import org.ethan.agent.AgentMain;
 import org.ethan.ui.logger.Logger;
 import org.ethan.ui.logger.LoggerPanel;
 

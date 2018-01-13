@@ -1,5 +1,6 @@
 package org.ethan.util.reflection;
 
+import org.ethan.data.Engine;
 import org.ethan.ui.logger.Logger;
 
 import java.io.IOException;
@@ -103,5 +104,9 @@ public class ReflectionEngine {
         return null;
     }
 
+    public static Object getBotAppInstance() {
+        return Engine.getReflectionEngine().getFieldValue("org.osbot.BotApplication", "iiIiIiiIiIII");
+
+    }
 
 }

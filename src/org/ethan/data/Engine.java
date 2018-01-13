@@ -10,11 +10,10 @@ import java.util.Map;
  * Created by Ethan on 1/12/2018.
  */
 public class Engine {
-
+    private static String pattern;
     private static ReflectionEngine reflectionEngine;
     private static Collection<Class<?>> classCache;
-    private static Map<String, Class<?>> classes = new HashMap<>();
-
+    private static Map<String, byte[]> classes = new HashMap<>();
     public static ReflectionEngine getReflectionEngine() {
         return reflectionEngine;
     }
@@ -31,7 +30,15 @@ public class Engine {
         Engine.classCache = classCache;
     }
 
-    public static Map<String, Class<?>> getClasses() {
+    public static Map<String, byte[]> getClasses() {
         return classes;
+    }
+
+    public static String getPattern() {
+        return pattern;
+    }
+
+    public static void setPattern(String pattern) {
+        Engine.pattern = pattern;
     }
 }
