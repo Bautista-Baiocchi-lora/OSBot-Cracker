@@ -2,7 +2,7 @@
   <artifact type="jar" build-on-make="true" name="OSBot Jailbreak.jar">
     <output-path>$USER_HOME$/Desktop</output-path>
     <root id="archive" name="OSBot Jailbreak.jar">
-      <element id="module-output" name="MirrorOsbot" />
+      <element id="module-output" name="OSBot Jailbreak" />
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
       </element>

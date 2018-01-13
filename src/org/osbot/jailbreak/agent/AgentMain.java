@@ -5,7 +5,6 @@ package org.osbot.jailbreak.agent;
  */
 
 import org.osbot.jailbreak.botapp.BotApp;
-import org.osbot.jailbreak.botapp.hooks.HookCollection;
 import org.osbot.jailbreak.data.Engine;
 import org.osbot.jailbreak.ui.MainFrame;
 import org.osbot.jailbreak.ui.logger.Logger;
@@ -37,7 +36,6 @@ public class AgentMain implements ClassFileTransformer {
 			Logger.log(e.getLocalizedMessage());
 		}
 		new BotApp();
-
 	}
 
 

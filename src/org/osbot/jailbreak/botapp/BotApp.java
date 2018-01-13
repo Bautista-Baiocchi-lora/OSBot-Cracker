@@ -9,7 +9,7 @@ import org.osbot.jailbreak.ui.logger.Logger;
 public class BotApp {
 
     public BotApp() {
-        setBoolean("iIIiiiiIIIII", true); //SETTING VIP
+        setBoolean("IIiIiiiiIiiI", true);
         Logger.log("Set account VIP access.");
     }
 
