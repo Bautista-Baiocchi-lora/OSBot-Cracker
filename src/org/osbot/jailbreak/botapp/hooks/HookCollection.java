@@ -14,8 +14,7 @@ public class HookCollection {
 	private Map<String, FieldHook> fieldHookMap = new HashMap<>();
 
 	public HookCollection() {
-		iterateMapOne("org.osbot.core.inject.hook.FieldHook");
-		iterateMapTwo("org.osbot.core.inject.hook.FieldHook");
+		iterateMaps("org.osbot.core.inject.hook.FieldHook");
 	}
 
 	public void print() {
@@ -44,38 +43,37 @@ public class HookCollection {
 		return (Map<String, Object>) Engine.getReflectionEngine().getFieldValue("org.osbot.core.inject.hook.ClassHook", "IiiIiiiiIiIi", obj);
 	}
 
-	public void iterateMapOne(String infoClass) {
+	public void iterateMaps(String infoClass) {
 		for (Map.Entry<String, Object> entry : getClassHookMapOne().entrySet()) {
 			for (Map.Entry<String, Object> entry2 : getFieldHookMapOne(entry.getValue()).entrySet()) {
 				Object obj = entry2.getValue();
-				fieldHookMap.put(getMappedName(infoClass, obj), new FieldHook(getOriginalName(infoClass, obj), getOriginalDesc(infoClass, obj), "", getCustomDesc(infoClass, obj), getMappedName(infoClass, obj), 1));
+				fieldHookMap.put(getMappedName(infoClass, obj), new FieldHook(getOriginalFieldName(infoClass, obj), getOriginalFieldDesc(infoClass, obj), "", getCustomFieldDesc(infoClass, obj), getMappedName(infoClass, obj), 1));
+			}
+		}
+		for (Map.Entry<String, Object> entry : getClassHookMapTwo().entrySet()) {
+			for (Map.Entry<String, Object> entry2 : getFieldHookMapTwo(entry.getValue()).entrySet()) {
+				Object obj = entry2.getValue();
+				fieldHookMap.put(getMappedName(infoClass, obj), new FieldHook(getOriginalFieldName(infoClass, obj), getOriginalFieldDesc(infoClass, obj), "", getCustomFieldDesc(infoClass, obj), getMappedName(infoClass, obj), 1));
 			}
 		}
 	}
 
-	public void iterateMapTwo(String infoClass) {
-		for (Map.Entry<String, Object> entry : getClassHookMapTwo().entrySet()) {
-			for (Map.Entry<String, Object> entry2 : getFieldHookMapTwo(entry.getValue()).entrySet()) {
-				Object obj = entry2.getValue();
-				fieldHookMap.put(getMappedName(infoClass, obj), new FieldHook(getOriginalName(infoClass, obj), getOriginalDesc(infoClass, obj), "", getCustomDesc(infoClass, obj), getMappedName(infoClass, obj), 1));
-			}
-		}
-	}
+
 
 
 	public String getMappedName(String clazz, Object obj) {
 		return (String) Engine.getReflectionEngine().getFieldValue(clazz, "mappedName", obj);
 	}
 
-	public String getOriginalName(String clazz, Object obj) {
+	public String getOriginalFieldName(String clazz, Object obj) {
 		return (String) Engine.getReflectionEngine().getFieldValue(clazz, "originalName", obj);
 	}
 
-	public String getOriginalDesc(String clazz, Object obj) {
+	public String getOriginalFieldDesc(String clazz, Object obj) {
 		return (String) Engine.getReflectionEngine().getFieldValue(clazz, "originalDesc", obj);
 	}
 
-	public String getCustomDesc(String clazz, Object obj) {
+	public String getCustomFieldDesc(String clazz, Object obj) {
 		return (String) Engine.getReflectionEngine().getFieldValue(clazz, "customDesc", obj);
 	}
 
