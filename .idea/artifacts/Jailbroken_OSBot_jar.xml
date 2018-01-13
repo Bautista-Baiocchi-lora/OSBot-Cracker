@@ -1,8 +1,8 @@
 <component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="OSBot Jailbreak.jar">
+  <artifact type="jar" name="Jailbroken-OSBot:jar">
     <output-path>$USER_HOME$/Desktop</output-path>
-    <root id="archive" name="OSBot Jailbreak.jar">
-      <element id="module-output" name="OSBot Jailbreak" />
+    <root id="archive" name="Jailbroken-OSBot.jar">
+      <element id="module-output" name="Jailbroken-OSBot" />
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
       </element>

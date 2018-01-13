@@ -105,7 +105,7 @@ public class ReflectionEngine {
     }
 
     public static Object getBotAppInstance() {
-        return Engine.getReflectionEngine().getFieldValue("org.osbot.BotApplication", "iiIiIiiIiIII");
+        return Engine.getReflectionEngine().getFieldValue("org.osbot.BotApplication", "iiiiiiiiIiii");
 
     }
 
