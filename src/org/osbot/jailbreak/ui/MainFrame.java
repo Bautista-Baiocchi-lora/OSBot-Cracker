@@ -8,6 +8,8 @@ import org.osbot.jailbreak.ui.logger.LoggerPanel;
 import org.osbot.jailbreak.util.Utilities;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -43,6 +45,22 @@ public class MainFrame extends JFrame implements ActionListener {
 		controlsLayout.add(load);
 
 		this.packageName = new JTextField();
+		packageName.getDocument().addDocumentListener(new DocumentListener() {
+			@Override
+			public void insertUpdate(final DocumentEvent e) {
+
+			}
+
+			@Override
+			public void removeUpdate(final DocumentEvent e) {
+
+			}
+
+			@Override
+			public void changedUpdate(final DocumentEvent e) {
+				Engine.setPattern(packageName.getText());
+			}
+		});
 		controlsLayout.add(packageName);
 
 		this.add(controlsLayout, BorderLayout.NORTH);
