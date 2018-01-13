@@ -27,7 +27,6 @@ public class Logger extends JTextPane {
         final DefaultCaret caret = (DefaultCaret) getCaret();
         caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
         setBackground(color);
-        log("Logger started.");
     }
 
     private static void write(final String str, final LogType type, final LoggerFlag... flags) {

@@ -3,6 +3,7 @@ package org.osbot.jailbreak.data;
 import org.osbot.jailbreak.botapp.hooks.HookCollection;
 import org.osbot.jailbreak.util.reflection.ReflectionEngine;
 
+import java.lang.instrument.Instrumentation;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +16,15 @@ public class Engine {
     private static Collection<Class<?>> classCache;
     private static Map<String, byte[]> classes = new HashMap<>();
     private static HookCollection hookCollection;
+    private static Instrumentation instrumentation;
+
+    public static Instrumentation getInstrumentation() {
+        return instrumentation;
+    }
+
+    public static void setInstrumentation(Instrumentation instrumentation) {
+        Engine.instrumentation = instrumentation;
+    }
 
     public static HookCollection getHookCollection() {
         return hookCollection;

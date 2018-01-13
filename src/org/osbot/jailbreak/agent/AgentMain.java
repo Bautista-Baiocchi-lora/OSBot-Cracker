@@ -9,6 +9,7 @@ import org.osbot.jailbreak.data.Engine;
 import org.osbot.jailbreak.ui.MainFrame;
 import org.osbot.jailbreak.ui.logger.Logger;
 import org.osbot.jailbreak.util.Utilities;
+import org.osbot.jailbreak.util.injection.SimpleClassTransformer;
 import org.osbot.jailbreak.util.reflection.ReflectionEngine;
 
 import java.io.IOException;
@@ -18,18 +19,17 @@ import java.security.ProtectionDomain;
 
 public class AgentMain implements ClassFileTransformer {
 
-    private static Instrumentation inst;
-
     public static void premain(String args, Instrumentation instrumentation) {
         agentmain(args, instrumentation);
     }
 
     public static void agentmain(String args, Instrumentation instrumentation) {
-        System.out.println("[Agent] Load agent into running JVM using Attach API");
-        inst = instrumentation;
-        inst.addTransformer(new AgentMain(), true);
+        Engine.setInstrumentation(instrumentation);
+        Engine.getInstrumentation().addTransformer(new AgentMain(), true);
+        Engine.getInstrumentation().addTransformer(new SimpleClassTransformer(), true);
         Engine.setClassCache(Utilities.getAllClasses(instrumentation));
         new MainFrame(instrumentation);
+        Logger.log("[Agent] Successfully loaded into the JVM");
         try {
             Engine.setReflectionEngine(new ReflectionEngine(ClassLoader.getSystemClassLoader()));
         } catch (IOException e) {
@@ -46,10 +46,10 @@ public class AgentMain implements ClassFileTransformer {
             Logger.log("Adding: " + className + " to cache..");
             Engine.getClasses().put(className, classBytes);
         }
-
         return classBytes;
     }
 }
+
 
 
 

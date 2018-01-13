@@ -8,7 +8,6 @@ import org.osbot.jailbreak.ui.logger.LoggerPanel;
 import org.osbot.jailbreak.util.Utilities;
 
 import javax.swing.*;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -69,11 +68,16 @@ public class MainFrame extends JFrame implements ActionListener {
     public void actionPerformed(final ActionEvent e) {
         switch (e.getActionCommand()) {
             case "search":
-                Collection<Class<?>> result = Utilities.getDifference(Engine.getClassCache(), Utilities.getAllClasses(instrumentation));
-                for (Class<?> clazz : result) {
-                    if (!Utilities.stringContainsItemFromList(clazz.toGenericString(), Constants.ignore)) {
-                        Logger.log("We found: "+clazz.toGenericString());
+                try {
+                    Collection<Class<?>> result = Utilities.getDifference(Engine.getClassCache(), Utilities.getAllClasses(instrumentation));
+                    for (Class<?> clazz : result) {
+                        Engine.getInstrumentation().retransformClasses(clazz);
+                        if (!Utilities.stringContainsItemFromList(clazz.toGenericString(), Constants.ignore)) {
+                            Logger.log("We found: " + clazz.toGenericString());
+                        }
                     }
+                }catch (Exception e1) {
+                    Logger.log(e1.getLocalizedMessage());
                 }
                 break;
             case "dump":
@@ -81,7 +85,7 @@ public class MainFrame extends JFrame implements ActionListener {
                 Utilities.dumpJar(new File(Constants.dumpDir + "dump.jar"));
                 break;
             case "strip hooks":
-                if (Engine.getHookCollection() == null) {
+               if (Engine.getHookCollection() == null) {
                     Engine.setHookCollection(new HookCollection());
                 }
                 Engine.getHookCollection().print();
