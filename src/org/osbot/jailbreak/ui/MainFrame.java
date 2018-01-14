@@ -3,6 +3,7 @@ package org.osbot.jailbreak.ui;
 import org.osbot.jailbreak.botapp.hooks.HookCollection;
 import org.osbot.jailbreak.data.Constants;
 import org.osbot.jailbreak.data.Engine;
+import org.osbot.jailbreak.scripts.SetScript;
 import org.osbot.jailbreak.ui.logger.Logger;
 import org.osbot.jailbreak.ui.logger.LoggerPanel;
 import org.osbot.jailbreak.util.Utilities;
@@ -85,10 +86,11 @@ public class MainFrame extends JFrame implements ActionListener {
                 Utilities.dumpJar(new File(Constants.dumpDir + "dump.jar"));
                 break;
             case "strip hooks":
-               if (Engine.getHookCollection() == null) {
+             /*  if (Engine.getHookCollection() == null) {
                     Engine.setHookCollection(new HookCollection());
                 }
-                Engine.getHookCollection().print();
+                Engine.getHookCollection().print();*/
+                new SetScript();
                 break;
         }
     }
