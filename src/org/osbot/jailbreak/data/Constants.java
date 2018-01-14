@@ -7,6 +7,6 @@ import java.io.File;
  */
 public class Constants {
     public static String dumpDir = System.getProperty("user.home") + File.separator + "Desktop" + File.separator + "Dump" + File.separator;
-    public static String[] ignore = {"org.osbot", "java.util", "sun/reflect/", "java.",
+    public static String[] ignore = {"org.osbot", "jdk/internal", "jdk.internal", "java.util", "sun/reflect/", "java.",
             "sun.", "javax."};
 }

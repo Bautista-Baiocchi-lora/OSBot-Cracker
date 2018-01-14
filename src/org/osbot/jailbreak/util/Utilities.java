@@ -6,13 +6,9 @@ import org.osbot.jailbreak.ui.logger.Logger;
 
 import java.io.*;
 import java.lang.instrument.Instrumentation;
-import java.net.JarURLConnection;
-import java.net.URL;
 import java.util.*;
 import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
 import java.util.jar.JarOutputStream;
-import java.util.zip.ZipEntry;
 
 
 /**
@@ -48,26 +44,6 @@ public class Utilities {
         }
     }
 
-    public static JarFile getJarFile(final String url) {
-        try {
-           return getJarFile(new URL(url));
-        } catch (Exception e) {
-            Logger.log("ERROR: "+e.getLocalizedMessage());
-        }
-        return null;
-    }
-    public static JarFile getJarFile(URL jarFileUrl) throws IOException {
-        JarFile jarFile = null;
-
-        if (jarFileUrl != null) {
-            JarURLConnection conn = (JarURLConnection) jarFileUrl.openConnection();
-            conn.setUseCaches(false);
-            conn.connect();
-            jarFile = conn.getJarFile();
-        }
-
-        return jarFile;
-    }
 
     public static boolean stringContainsItemFromList(String inputStr, String[] items) {
         return Arrays.stream(items).parallel().anyMatch(inputStr::contains);
@@ -89,5 +65,6 @@ public class Utilities {
             e.printStackTrace();
         }
     }
+
 
 }
