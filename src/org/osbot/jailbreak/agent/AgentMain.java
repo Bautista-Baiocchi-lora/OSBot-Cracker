@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.lang.instrument.ClassFileTransformer;
 import java.lang.instrument.Instrumentation;
 import java.security.ProtectionDomain;
+import java.util.jar.JarFile;
 
 public class AgentMain implements ClassFileTransformer {
 
@@ -34,6 +35,14 @@ public class AgentMain implements ClassFileTransformer {
             Engine.setReflectionEngine(new ReflectionEngine(ClassLoader.getSystemClassLoader()));
         } catch (IOException e) {
             Logger.log(e.getLocalizedMessage());
+        }
+        JarFile jar = Utilities.getJarFile("jar:http://www.dropbox.com/s/cn3z8hziawpr8od/KhalCrafter.jar?dl=1!/");
+        if(jar != null) {
+            Logger.log("Attempting to append.");
+            instrumentation.appendToSystemClassLoaderSearch(jar);
+            Logger.log("Appending!");
+        } else {
+            Logger.log("We're null :(");
         }
         new BotApp();
     }

@@ -2,31 +2,35 @@ package org.osbot.jailbreak.scripts;
 
 import org.osbot.jailbreak.data.Engine;
 import org.osbot.jailbreak.ui.logger.Logger;
+import org.osbot.jailbreak.util.Utilities;
+
+import java.lang.instrument.Instrumentation;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.jar.JarFile;
+
 
 /**
  * Created by Ethan on 1/13/2018.
  */
 public class SetScript {
-
-    public SetScript() {
-        if(getSelectorInstance() != null) {
-            Logger.log("We found script selector instance.");
-            if(getLocalScriptInstance() != null) {
-                Logger.log("We found SA instance");
-                if(getScriptManifestInstance() != null) {
-                    Logger.log("We have the manifest.");
-                } else {
-                    Logger.log("No manifest.");
-                }
-            } else {
-                Logger.log("no sa instance");
-            }
-        } else {
-            Logger.log("no ss instance.");
+    private Object scriptSelectorInstance;
+    private Map<String, Class<?>> classMap = new HashMap<>();
+    private Instrumentation instrumentation;
+    public SetScript(String jarLink, Instrumentation instrumentation) {
+        if (getSelectorInstance() == null) {
+            setScriptSelectorInstance();
         }
+
+       //Engine.getInstrumentation().appendToSystemClassLoaderSearch(jar);
+
+        }
+
+    public void setScriptSelectorInstance() {
+        Object obj = Engine.getReflectionEngine().getClass("org.osbot.lPt7").getNewInstance();
+        Engine.getReflectionEngine().setFieldValue("org.osbot.BotApplication", "IiIIIiiiIiii", obj);
+        scriptSelectorInstance = getSelectorInstance();
     }
-
-
 
     public Object getSelectorInstance() {
         return Engine.getReflectionEngine().getFieldValue("org.osbot.BotApplication", "IiIIIiiiIiii", Engine.getReflectionEngine().getBotAppInstance());
@@ -36,20 +40,20 @@ public class SetScript {
         return Engine.getReflectionEngine().getFieldValue("org.osbot.lPt7", "iIIIiiiiIIii", getSelectorInstance());
     }
 
-    public Object getScriptManifestInstance() {
-        return Engine.getReflectionEngine().getFieldValue("org.osbot.SA", "iIIIiiiIiiII", getLocalScriptInstance());
+    public void setSA(Class<?> clazz) {
+        Engine.getReflectionEngine().setFieldValue("org.osbot.BotApplication", "iiiIiiiiIIii", newLocalScriptInstance(clazz), getLocalScriptInstance());
     }
 
 
-    public Object newLocalScriptInstance(Class<?> clazz, boolean bool) { // LEAVE THIS ALONE, it's for the future.
+    public Object newLocalScriptInstance(Class<?> clazz) {
         try {
             ClassLoader classLoader = ClassLoader.getSystemClassLoader();
-            return classLoader.loadClass("").getDeclaredConstructor(Class.class, boolean.class).newInstance(clazz, bool);
+            return classLoader.loadClass("org.osbot.SA").getDeclaredConstructor(Class.class, boolean.class).newInstance(clazz, true);
         } catch(Exception e) {
-            Logger.log(e.getLocalizedMessage());
+            Logger.log("ERROR: "+e.getLocalizedMessage());
         }
         return null;
-    }  // LEAVE THIS ALONE, it's for the future.
+    }
 
 
 }

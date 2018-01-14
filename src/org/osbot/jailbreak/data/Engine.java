@@ -17,10 +17,10 @@ public class Engine {
     private static Map<String, byte[]> classes = new HashMap<>();
     private static HookCollection hookCollection;
     private static Instrumentation instrumentation;
-
     public static Instrumentation getInstrumentation() {
         return instrumentation;
     }
+
 
     public static void setInstrumentation(Instrumentation instrumentation) {
         Engine.instrumentation = instrumentation;

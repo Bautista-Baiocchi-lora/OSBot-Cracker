@@ -1,6 +1,5 @@
 package org.osbot.jailbreak.ui;
 
-import org.osbot.jailbreak.botapp.hooks.HookCollection;
 import org.osbot.jailbreak.data.Constants;
 import org.osbot.jailbreak.data.Engine;
 import org.osbot.jailbreak.scripts.SetScript;
@@ -72,13 +71,12 @@ public class MainFrame extends JFrame implements ActionListener {
                 try {
                     Collection<Class<?>> result = Utilities.getDifference(Engine.getClassCache(), Utilities.getAllClasses(instrumentation));
                     for (Class<?> clazz : result) {
-                        Engine.getInstrumentation().retransformClasses(clazz);
                         if (!Utilities.stringContainsItemFromList(clazz.toGenericString(), Constants.ignore)) {
                             Logger.log("We found: " + clazz.toGenericString());
                         }
                     }
                 }catch (Exception e1) {
-                    Logger.log(e1.getLocalizedMessage());
+                    Logger.log("ERROR: "+e1.getLocalizedMessage());
                 }
                 break;
             case "dump":
@@ -90,7 +88,7 @@ public class MainFrame extends JFrame implements ActionListener {
                     Engine.setHookCollection(new HookCollection());
                 }
                 Engine.getHookCollection().print();*/
-                new SetScript();
+                new SetScript("jar:http://www.dropbox.com/s/cn3z8hziawpr8od/KhalCrafter.jar?dl=1!/", instrumentation);
                 break;
         }
     }
