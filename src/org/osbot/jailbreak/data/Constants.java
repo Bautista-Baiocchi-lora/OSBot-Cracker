@@ -6,7 +6,7 @@ import java.io.File;
  * Created by Ethan on 1/12/2018.
  */
 public class Constants {
-    public static String dumpDir = System.getProperty("user.home") + File.separator + "Desktop" + File.separator + "Dump" + File.separator;
-    public static String[] ignore = {"org.osbot", "org.dreambot", "jdk/internal", "jdk.internal", "java.util", "sun/reflect/", "java.",
-            "sun.", "javax."};
+	public static String dumpDir = System.getProperty("user.home") + File.separator + "Desktop" + File.separator + "Dump" + File.separator;
+	public static String[] ignore = {"org.osbot", "org.dreambot", "jdk/internal", "jdk.internal", "java.util", "sun/reflect/", "java.",
+			"sun.", "javax.", "apple.", "apple/"};
 }

@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="OSBot-Cracker:jar">
+  <artifact type="jar" build-on-make="true" name="OSBot-Cracker:jar">
     <output-path>$USER_HOME$/.OSBot Jailbreaker</output-path>
     <root id="archive" name="Jailbreak.jar">
       <element id="module-output" name="OSBot-Cracker" />
