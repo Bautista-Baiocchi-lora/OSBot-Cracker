@@ -14,7 +14,7 @@ public class ReflectionEngine {
         this.classLoader = classLoader;
     }
 
-    public static Object getBotAppInstance() {
+    public Object getBotAppInstance() {
         return Engine.getReflectionEngine().getFieldValue("org.osbot.BotApplication", "iiiiiiiiIiii");
 
     }
@@ -83,19 +83,15 @@ public class ReflectionEngine {
         }
     }
 
-    public void setFieldValue(String className, String fieldName, Object value) {
-        setFieldValue(className, fieldName, value, null);
-    }
-
-    public Object getMethodValue(String className, String fieldName, int paramCount, String returnType, Object instance) {
+    public Object getMethodValue3(String className, String fieldName, int paramCount, String returnType, Object instance) {
         try {
             final ReflectedClass clazz = getClass(className, instance);
             for (ReflectedMethod m : clazz.getMethods()) {
                 if (m.getName().equals(fieldName)) {
                     if (m.getParameterCount() == paramCount) {
-                        //   Logger.log(m.getReturnType().toGenericString());
+                        Logger.log(m.getReturnType().toGenericString());
                         if (m.getReturnType().toGenericString().equals(returnType)) {
-                            Logger.log("We're invoking collection");
+                            Logger.log("We're invoking byteArray");
                             return m.invoke();
                         }
                     }
@@ -106,5 +102,61 @@ public class ReflectionEngine {
         }
         return null;
     }
-
+    public Object getScriptValue(String className, String fieldName, int paramCount, String returnType, Object instance, int value) {
+        try {
+            final ReflectedClass clazz = getClass(className, instance);
+            for (ReflectedMethod m : clazz.getMethods()) {
+                if (m.getName().equals(fieldName)) {
+                    if (m.getParameterCount() == paramCount) {
+                        Logger.log(m.getReturnType().toGenericString());
+                        if (m.getReturnType().toGenericString().equals(returnType)) {
+                            Logger.log("We're invoking byteArray");
+                            return m.invoke(value);
+                        }
+                    }
+                }
+            }
+        } catch (IllegalAccessException | InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public Object getMethodValue(String className, String fieldName, int paramCount, String returnType, Object instance) {
+        try {
+            final ReflectedClass clazz = getClass(className, instance);
+            for (ReflectedMethod m : clazz.getMethods()) {
+                if (m.getName().equals(fieldName)) {
+                    if (m.getParameterCount() == paramCount) {
+                        Logger.log(m.getReturnType().toGenericString());
+                        if (m.getReturnType().toGenericString().equals(returnType)) {
+                            Logger.log("We're invoking byteArray");
+                            return m.invoke((int)997);
+                        }
+                    }
+                }
+            }
+        } catch (IllegalAccessException | InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public Object getMethodValue2(String className, String fieldName, int paramCount, String returnType, Object instance, Object... params) {
+        try {
+            final ReflectedClass clazz = getClass(className, instance);
+            for (ReflectedMethod m : clazz.getMethods()) {
+                if (m.getName().equals(fieldName)) {
+                    if (m.getParameterCount() == paramCount) {
+                        Logger.log(m.getReturnType().toGenericString());
+                        if (m.getReturnType().toGenericString().equals(returnType)) {
+                            Logger.log("We're invoking byteArray decrypt");
+                            return m.invoke(params);
+                        }
+                    }
+                }
+            }
+        } catch (IllegalAccessException | InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

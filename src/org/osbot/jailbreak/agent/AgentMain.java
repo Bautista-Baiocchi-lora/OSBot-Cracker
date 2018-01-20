@@ -8,6 +8,7 @@ import org.osbot.jailbreak.data.Engine;
 import org.osbot.jailbreak.ui.MainFrame;
 import org.osbot.jailbreak.ui.logger.Logger;
 import org.osbot.jailbreak.util.Utilities;
+import org.osbot.jailbreak.util.reflection.ReflectedField;
 import org.osbot.jailbreak.util.reflection.ReflectionEngine;
 import java.io.IOException;
 import java.lang.instrument.ClassFileTransformer;
@@ -16,9 +17,6 @@ import java.security.ProtectionDomain;
 
 
 public class AgentMain implements ClassFileTransformer {
-    public static void premain(String args, Instrumentation instrumentation) {
-        agentmain(args, instrumentation);
-    }
 
     public static void agentmain(String args, Instrumentation instrumentation) {
         Engine.setInstrumentation(instrumentation);
@@ -31,9 +29,6 @@ public class AgentMain implements ClassFileTransformer {
         } catch (IOException e) {
             Logger.log(e.getLocalizedMessage());
         }
-        //new BotApp();
-
-
     }
 
     @Override
