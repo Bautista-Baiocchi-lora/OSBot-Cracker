@@ -1,5 +1,6 @@
 package org.osbot.jailbreak.ui;
 
+import org.osbot.jailbreak.botapp.BotApp;
 import org.osbot.jailbreak.data.Constants;
 import org.osbot.jailbreak.data.Engine;
 import org.osbot.jailbreak.ui.logger.Logger;
@@ -79,8 +80,8 @@ public class MainFrame extends JFrame implements ActionListener {
                 }
                 break;
             case "dump":
+                new BotApp(997);
 
-                Utilities.dumpJar(new File(Constants.dumpDir + "dump.jar"));
                 break;
             case "strip hooks":
 

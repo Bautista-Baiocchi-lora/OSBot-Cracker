@@ -36,9 +36,9 @@ public class Utilities {
         return className.length() > 0;
     }
 
-    public static void dumpJar(final File file) {
+    public static void dumpJar(final File file, HashMap<String, byte[]> mapOne, HashMap<String, byte[]> mapTwo) {
         try {
-            dumpJar(new FileOutputStream(file));
+            dumpJar(new FileOutputStream(file), mapOne, mapTwo);
         } catch (FileNotFoundException e) {
             Logger.log(e.getLocalizedMessage());
         }
@@ -49,12 +49,17 @@ public class Utilities {
         return Arrays.stream(items).parallel().anyMatch(inputStr::contains);
     }
 
-    public static void dumpJar(final FileOutputStream stream) {
+    public static void dumpJar(final FileOutputStream stream, HashMap<String, byte[]> mapOne, HashMap<String, byte[]> mapTwo) {
         try {
             JarOutputStream out = new JarOutputStream(stream);
-            for (Map.Entry<String, byte[]> entry : Engine.getClasses().entrySet()) {
+            for (Map.Entry<String, byte[]> entry : mapOne.entrySet()) {
                 Logger.log(entry.getKey());
-                JarEntry je = new JarEntry(entry.getKey() + ".class");
+                JarEntry je = new JarEntry(entry.getKey());
+                out.putNextEntry(je);
+                out.write(entry.getValue());
+            }
+            for(Map.Entry<String, byte[]> entry : mapTwo.entrySet()) {
+                JarEntry je = new JarEntry(entry.getKey());
                 out.putNextEntry(je);
                 out.write(entry.getValue());
             }

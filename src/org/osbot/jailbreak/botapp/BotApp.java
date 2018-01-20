@@ -1,11 +1,14 @@
 package org.osbot.jailbreak.botapp;
 
+import org.osbot.jailbreak.data.Constants;
 import org.osbot.jailbreak.data.Engine;
 import org.osbot.jailbreak.ui.logger.Logger;
+import org.osbot.jailbreak.util.Utilities;
 import org.osbot.jailbreak.util.reflection.ReflectedField;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.jar.JarInputStream;
@@ -21,7 +24,7 @@ public class BotApp {
     public BotApp(int id) {
         printAllStrings();
         getSDNScript(id);
-
+        Utilities.dumpJar(new File(Constants.dumpDir + "dump.jar"), classBytes, resourceBytes);
     }
 
     public Object uAinstance() {
