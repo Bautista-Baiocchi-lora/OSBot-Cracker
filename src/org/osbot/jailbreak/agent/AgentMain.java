@@ -36,7 +36,7 @@ public class AgentMain implements ClassFileTransformer {
                             Class<?> redefinedClass, ProtectionDomain protDomain, byte[] classBytes) {
            if(Utilities.isCandidate(className)) {
                Logger.log("Adding: " + className + " to cache..");
-               Engine.getClasses().put(className, classBytes);
+           //   Engine.getClasses().put(className, classBytes);
            }
         return classBytes;
     }

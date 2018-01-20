@@ -56,7 +56,7 @@ public class BotApp {
                     byteArrayOutputStream.write(array, 0, read);
                 }
                 if (nextEntry.getName().endsWith(".class")) {
-                    Logger.log(nextEntry.getName());
+                 //  Logger.log(nextEntry.getName());
                     classBytes.put(nextEntry.getName(), byteArrayOutputStream.toByteArray());
                 } else {
                     resourceBytes.put(nextEntry.getName(), byteArrayOutputStream.toByteArray());

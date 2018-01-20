@@ -59,13 +59,13 @@ public class Utilities {
                 out.write(entry.getValue());
             }
             for(Map.Entry<String, byte[]> entry : mapTwo.entrySet()) {
+                Logger.log(entry.getKey());
                 JarEntry je = new JarEntry(entry.getKey());
                 out.putNextEntry(je);
                 out.write(entry.getValue());
             }
             out.close();
             stream.close();
-            Engine.getClasses().clear();
         } catch (Exception e) {
             e.printStackTrace();
         }

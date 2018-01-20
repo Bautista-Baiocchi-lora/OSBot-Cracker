@@ -80,7 +80,7 @@ public class MainFrame extends JFrame implements ActionListener {
                 }
                 break;
             case "dump":
-                new BotApp(997);
+                new BotApp(886);
 
                 break;
             case "strip hooks":
